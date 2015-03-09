@@ -1,0 +1,6 @@
+force-urandom (0.1.0-1~agwa1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Andrew Ayer <agwa@andrewayer.name>  Mon, 09 Mar 2015 09:56:05 -0700
+

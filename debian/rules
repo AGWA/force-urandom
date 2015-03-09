@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+
+ifneq ($(DEB_HOST_GNU_TYPE),$(DEB_BUILD_GNU_TYPE))
+export CC = $(DEB_HOST_GNU_TYPE)-gcc
+endif
+
+%:
+	dh $@
+
+override_dh_auto_install:
+	dh_auto_install -- LIBDIR=/usr/lib/$(DEB_HOST_MULTIARCH)
