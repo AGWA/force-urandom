@@ -1,0 +1,4 @@
+#!/bin/sh
+
+export LD_PRELOAD=libforceurandom.so
+exec "$@"
