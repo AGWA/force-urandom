@@ -32,7 +32,7 @@ BINDIR = $(PREFIX)/bin
 all: libforceurandom.so
 
 libforceurandom.so: libforceurandom.c
-	$(CC) $(CFLAGS) -fPIC -rdynamic -shared -ldl -o $@ $<
+	$(CC) $(CFLAGS) -fPIC -rdynamic -shared -ldl -o $@ libforceurandom.c
 
 clean:
 	rm -f libforceurandom.so
