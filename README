@@ -1,0 +1,14 @@
+force-urandom is a tool to force programs to use /dev/urandom instead of
+/dev/random, since /dev/urandom on Linux is secure whereas /dev/random
+is stupidly slow: https://www.2uo.de/myths-about-urandom/
+
+Just put force-urandom in front of the command you want to run.
+For example, to generate a GPG key in a reasonable amount of time,
+you could run:
+
+	force-urandom gpg --gen-key
+
+force-urandom works by LD_PRELOADing a shared library which intercepts
+open calls and replaces a /dev/random argument with /dev/urandom.
+
+To compile, run `make`.
