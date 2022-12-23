@@ -1,3 +1,14 @@
+**** THIS PROJECT IS DEPRECATED ****
+
+As of Linux 5.19, /dev/random is just as good as /dev/urandom, so it
+is generally no longer necessary to force programs to use /dev/urandom.
+
+If you do need to force programs to use /dev/urandom for some reason, you
+can use ldpreload-forceurandom.so from <https://github.com/AGWA/ldpreload>.
+
+
+Original README below:
+
 force-urandom is a tool to force programs to use /dev/urandom instead of
 /dev/random, since /dev/urandom on Linux is secure whereas /dev/random
 is stupidly slow: https://www.2uo.de/myths-about-urandom/
